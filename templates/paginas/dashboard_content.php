@@ -9,19 +9,17 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col mt-0">
-                            <h5 class="card-title">Sales</h5>
+                            <h5 class="card-title">Faturamento</h5>
                         </div>
                         <div class="col-auto">
                             <div class="stat text-primary">
-                                <i class="align-middle" data-feather="truck"></i>
+                                <i class="align-middle" data-feather="dollar-sign"></i>
                             </div>
                         </div>
                     </div>
-                    <h1 class="mt-1 mb-3">2.382</h1>
-                    <div class="mb-0">
-                        <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                        <span class="text-muted">Since last week</span>
-                    </div>
+
+                    <h1 class="mt-1 mb-3">R$ 2.382</h1>
+
                 </div>
             </div>
         </div>
@@ -32,19 +30,17 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col mt-0">
-                            <h5 class="card-title">Earnings</h5>
+                            <h5 class="card-title">Clientes ativos</h5>
                         </div>
                         <div class="col-auto">
                             <div class="stat text-primary">
-                                <i class="align-middle" data-feather="dollar-sign"></i>
+                                <i class="align-middle" data-feather="users"></i>
                             </div>
                         </div>
                     </div>
-                    <h1 class="mt-1 mb-3">$21.300</h1>
-                    <div class="mb-0">
-                        <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
-                        <span class="text-muted">Since last week</span>
-                    </div>
+
+                    <h1 class="mt-1 mb-3">15</h1>
+                  
                 </div>
             </div>
         </div>
@@ -55,19 +51,17 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col mt-0">
-                            <h5 class="card-title">Visitors</h5>
+                            <h5 class="card-title">Orçamentos emitidos</h5>
                         </div>
                         <div class="col-auto">
                             <div class="stat text-primary">
-                                <i class="align-middle" data-feather="users"></i>
+                                <i class="align-middle" data-feather="file"></i>
                             </div>
                         </div>
                     </div>
-                    <h1 class="mt-1 mb-3">14.212</h1>
-                    <div class="mb-0">
-                        <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
-                        <span class="text-muted">Since last week</span>
-                    </div>
+
+                    <h1 class="mt-1 mb-3">15</h1>
+                    
                 </div>
             </div>
         </div>
@@ -78,19 +72,89 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col mt-0">
-                            <h5 class="card-title">Orders</h5>
+                            <h5 class="card-title">Tickets</h5>
                         </div>
                         <div class="col-auto">
                             <div class="stat text-primary">
-                                <i class="align-middle" data-feather="shopping-cart"></i>
+                                <i class="align-middle" data-feather="message-circle"></i>
                             </div>
                         </div>
                     </div>
                     <h1 class="mt-1 mb-3">64</h1>
-                    <div class="mb-0">
-                        <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
-                        <span class="text-muted">Since last week</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+       <div class="col-12 col-lg-6 col-xxl-6 d-flex">
+            <div class="card flex-fill">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Clientes</h5>
+                    <span class="badge bg-primary">5</span>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            <div>
+                                <h6 class="mb-1">Project Apollo</h6>
+                                <small class="text-muted">ID: #001</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-success mb-1">Ativo</span>
+                                <small class="d-block text-muted">01/01/2021</small>
+                            </div>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            <div>
+                                <h6 class="mb-1">Project Zeus</h6>
+                                <small class="text-muted">ID: #002</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-warning mb-1">Pendente</span>
+                                <small class="d-block text-muted">15/02/2021</small>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-sm btn-primary">Ver todos os clientes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xxl-6 d-flex">
+            <div class="card flex-fill">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Orçamentos emitidos</h5>
+                    <span class="badge bg-info">3</span>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            <div>
+                                <h6 class="mb-1">Orçamento Apollo</h6>
+                                <small class="text-muted">ID: #ORC-001</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-success mb-1">Aprovado</span>
+                                <small class="d-block text-muted">R$ 15.000,00</small>
+                            </div>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            <div>
+                                <h6 class="mb-1">Orçamento Zeus</h6>
+                                <small class="text-muted">ID: #ORC-002</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-warning mb-1">Em análise</span>
+                                <small class="d-block text-muted">R$ 8.500,00</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-sm btn-info">Ver todos os orçamentos</a>
                 </div>
             </div>
         </div>
