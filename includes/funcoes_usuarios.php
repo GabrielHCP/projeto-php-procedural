@@ -12,7 +12,7 @@
 function autenticar_usuario(mysqli $mysqli, string $usuario, string $senha): ?array {
     
     // 1. Prepared Statement para buscar o usuário
-    $stmt = $mysqli->prepare("SELECT id, nome, email, senha_hash FROM usuarios WHERE email = ?");
+    $stmt = $mysqli->prepare("SELECT id, nome, email, senha_hash, empresa_id FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $usuario);
     $stmt->execute();
     

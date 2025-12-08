@@ -39,7 +39,7 @@
                         </div>
                     </div>
 
-                    <h1 class="mt-1 mb-3">15</h1>
+                    <h1 class="mt-1 mb-3"><?php echo htmlspecialchars($dados['total_clientes_ativos']); ?></h1>
                   
                 </div>
             </div>
