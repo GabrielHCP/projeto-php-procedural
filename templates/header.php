@@ -40,13 +40,13 @@ $titulo_pagina = $titulo_pagina ?? "Sistema Interno | Dashboard";
 					</li>
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" href="index.html">
+						<a class="sidebar-link" href="dashboard.php">
                              <i class="align-middle" data-feather="monitor"></i> <span class="align-middle">Dashboard</span>
                         </a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="clientes.php">
                              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Clientes</span>
                         </a>
 					</li>
