@@ -34,7 +34,79 @@ switch($acao) {
         $titulo_pagina = "Clientes Cadastrados";
         $template = 'client_list_content.php';
     break;
+    case 'adicionar': 
+        $titulo_pagina = "Cadastrar novo cliente";
+        $template = "client_form_content.php";
+    break;
+    case 'editar':
 
+        // 1. Obtém o ID pela URL
+        $cliente_id = $_GET['id'] ?? 0;
+        if($cliente_id === 0) {
+            header("Location: clientes.php?msg=erro_id");
+            exit;
+        }
+
+        // 2. Busca o cliente no banco (protegido pelo empresa_id)
+        $cliente_encontrado = buscar_cliente_por_id($mysqli, $empresa_id, $cliente_id);
+
+        if(!$cliente_encontrado) {
+            // Se o cliente não existir
+            header("Location: clientes.php?msg=nao_encontrado");
+            exit;
+        }
+
+        // 3. Define a variável $dados com os dados do cliente
+        // Essa variável será usada para pré-preencher o formulário (passo 3)
+        $dados = $cliente_encontrado;
+
+        $titulo_pagina = "Editando Cliente: " . htmlspecialchars($dados['nome']);
+        $template = "client_form_content.php";
+    break;
+    case 'salvar': 
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $sucesso = salvar_cliente($mysqli, $empresa_id, $_POST);
+
+            if($sucesso) {
+                // Sucesso: redireciona para a listagem
+                header("Location: clientes.php?msg=sucesso");
+                exit;
+            } else {
+                // Falha: Pode voltar ao formulário
+                $dados = $_POST;
+                $titulo_pagina = "Erro no cadastro";
+                $template = 'client_form_content.php';
+            }
+
+        } else {
+            // Se alguém tentar acessar ?acao=salvar via GET, manda para a listagem
+            header("Location: clientes.php");
+            exit;
+        }
+    break;
+    case 'excluir': 
+
+        // 1. Obtém o ID da URL e converte para inteiro
+        $cliente_id = $_GET['id'] ?? 0;
+
+        if($cliente_id > 0) {
+            $sucesso = excluir_cliente($mysqli, $empresa_id, $cliente_id);
+
+            if($sucesso) {
+                $mensagem = "Cliente excluído com sucesso (exclusão lógica).";
+            } else {
+                $mensagem = "Erro ao excluir cliente ou cliente não encontrado.";
+            }
+        } 
+
+        // Redireciona de volta para a listagem (usando o método GET)
+        header("Location: clientes.php?msg=" . urlencode($mensagem));
+        exit;
+ 
+    break;
+   
 }
 
 // 4. Carrega os templates
