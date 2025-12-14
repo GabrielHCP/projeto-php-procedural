@@ -1,3 +1,9 @@
+<?php
+    require_once '../includes/helpers.php';
+?>
+
+<?php echo get_flash_message(); ?>
+
 <div class="row mb-3">
     <div class="col-12">
         <a href="clientes.php?acao=adicionar" class="btn btn-primary">Cadastrar novo cliente</a>

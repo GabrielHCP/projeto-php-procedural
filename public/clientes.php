@@ -14,6 +14,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 // 2. O usuário está logado! Carrega os includes necessários
 require_once '../config/db_connection.php';
 require_once '../includes/funcoes_clientes.php';
+require_once '../includes/helpers.php';
 
 $empresa_id = $_SESSION['empresa_id'] ?? 0;
 if($empresa_id === 0) {
@@ -71,14 +72,20 @@ switch($acao) {
 
             if($sucesso) {
                 // Sucesso: redireciona para a listagem
-                header("Location: clientes.php?msg=sucesso");
-                exit;
+                $mensagem = empty($_POST['id']) ? "Cliente cadastrado com sucesso!" : "Cliente atualizado com sucesso!";
+                set_flash_message($mensagem, 'sucesso');
+                
             } else {
                 // Falha: Pode voltar ao formulário
-                $dados = $_POST;
-                $titulo_pagina = "Erro no cadastro";
-                $template = 'client_form_content.php';
+                set_flash_message("Erro ao salvar o cliente. Verifique os dados.", 'erro'); // Define a mensagem de erro
+                // $dados = $_POST;
+                // $titulo_pagina = "Erro no cadastro";
+                // $template = 'client_form_content.php';
             }
+
+            // Redireciona
+            header("Location: clientes.php");
+            exit;
 
         } else {
             // Se alguém tentar acessar ?acao=salvar via GET, manda para a listagem

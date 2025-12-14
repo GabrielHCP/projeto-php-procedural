@@ -118,7 +118,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-sm btn-primary">Ver todos os clientes</a>
+                    <a href="clientes.php" class="btn btn-sm btn-primary">Ver todos os clientes</a>
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-sm btn-info">Ver todos os orçamentos</a>
+                    <a href="orcamentos.php" class="btn btn-sm btn-info">Ver todos os orçamentos</a>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@
 function dashboard_contar_clientes_ativos(mysqli $mysqli, int $empresa_id): int {
 
     // 1. Usa prepared statement para evitar SQL Injection
-    $stmt = $mysqli->prepare("SELECT COUNT(id) AS total FROM clientes WHERE empresa_id = ? AND status = 'ativo'");
+    $stmt = $mysqli->prepare("SELECT COUNT(id) AS total FROM clientes WHERE empresa_id = ? AND status = 'ativo' AND excluido = 0");
 
     // 2. Liga o parâmetro e executa
     $stmt->bind_param('i', $empresa_id);
